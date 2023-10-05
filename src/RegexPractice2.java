@@ -22,5 +22,11 @@ public class RegexPractice2 {
         // area between a word and non-word character
         System.out.println("cat dog".matches("...\\s\\b..."));  // true
 
+        // opposites match with capital letter escaped characters
+        //  \\w is word character, but \\W is anything except word chars
+        System.out.println("cat".matches("\\W\\W\\W"));  // false
+        System.out.println("---".matches("\\W\\W\\W"));  // true
+        System.out.println("123".matches("\\W\\W\\W"));  // false
+
     }
 }
